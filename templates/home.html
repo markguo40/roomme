@@ -1,12 +1,101 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Roome</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{% static 'css/jumbotron-narrow.css'%}">
+
   <style type="text/css">
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    .profile {
+      width: 35px;
+      height: 35px;
+    }
+    .inline {
+      display: inline-block;
+    }
+    .header {
+      padding: 5px;
+      margin-bottom: 0px;
+    }
+    .photo-area {
+      position: relative;
+      margin-bottom: 20px;
+    }
+    .photo-area .words{
+      position: absolute;
+      top:200px;
+      left: 45%;
+      height: 50px;
+      width: 100px;
+    }
+
+    .photo {
+      width: 100%;
+      height: 300px;
+    }
+
+    .item {
+      padding: 30px;
+    }
+
+    .item-words {
+      margin-top: 30px;
+    }
+    .item-img{
+      width: 350px;
+      height: 300px;
+      border-radius: 100px;
+    }
+
   </style>
 </head>
 <body>
-  <div>This is roome under construction</div>
+      <nav class="header">
+        <div class="container">
+          <h3 class="text-muted inline">Roome</h3>
+          <img class='profile inline pull-right' src="{% static 'icon/profile.png'%}">
+        </div> <!-- /container -->
+      </nav>
+      <div class="photo-area">
+        <img class="photo" src="{% static 'img/cover.jpeg' %}">
+        <a class="btn btn-success btn-lg words" href="#" role="button">Sign in</a>
+      </div>
+      <div class="container">
+        <div class="row">
+            <img class="col-md-6 item item-img" src="{% static 'img/image1.jpg' %}">
+            <div class="col-md-6 item item-words">
+            <h3>Our Purpose</h3>
+            <p>Moving to a new apartment is more than the location. Roome helps match you and potential roommates with compatible living habits. Good roommates turn a new apartment into a new home; we’re here to make that happen.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 item item-words">
+            <h3>Find you matches</h3>
+            <p>Based on your answers to our questions, our matching algorithm lists the best roommates for you. When a match does not suit you, our dynamic algorithm improves your future matches.</p>
+            </div>
+
+            <img class="col-md-6 item item-img" src="{% static 'img/image2.jpg' %}">
+        </div>
+      </div> <!-- /container -->
+      <footer class="footer">
+        <div class="container">
+          <p>&copy; Roome Team Project 2016</p>
+        </div> <!-- /container -->
+      </footer>
+
 </body>
 </html>
