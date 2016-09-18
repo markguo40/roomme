@@ -20,3 +20,11 @@ def userpage(request):
 def swipeSupply(request):
     context = {}
     return render(request, 'swipe_supply.html', context)
+
+def dashboard(request):
+    context = {}
+    return render(request, 'dashboard.html', context)
+
+def matchesDashboard(request):
+    context = {}
+    return render(request, 'matches_dashboard.html', context)

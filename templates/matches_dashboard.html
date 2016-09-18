@@ -67,13 +67,17 @@
       .icon-group {
         margin-left: 10px;
       }
+      .bin {
+
+      }
+
     </style>
   </head>
 
   <body>
       <nav class="header">
         <div class="container">
-          <a class="text-muted inline back" href="{% url 'userpage' %}">Back</a>
+          <a class="text-muted inline back" href="{% url 'dashboard' %}">Back</a>
           <img class="profile-image pull-right inline" src="{% static 'img/zhanchen.jpg' %}">
         </div> <!-- /container -->
       </nav>
@@ -91,11 +95,9 @@
       </div>
       <div class="media-body">
         <h4 class="media-heading">Adrien Philippe</h4>
-        <p> Bonjour</p>
-        <div class="icon-group">
-        <img src="{% static 'icon/checkmark.svg' %}" class="icon-stuff">
-        <img src="{% static 'icon/xmark.svg' %}" class="icon-stuff">
-        </div>
+        <p>adrien.philippe@hec.com<img class='bin pull-right' src="{% static 'icon/delete.png' %}"><br>
+         017042389123 </p>
+
       </div>
     </div>
 
@@ -107,11 +109,7 @@
       </div>
       <div class="media-body">
         <h4 class="media-heading">El Mustacho</h4>
-        <p> ne me aimez vous des lunettes de soleil</p>
-        <div class="icon-group">
-          <img src="{% static 'icon/checkmark.svg' %}" class="icon-stuff">
-          <img src="{% static 'icon/xmark.svg' %}" class="icon-stuff">
-        </div>
+        <p>keen@gmx.de<img class='bin pull-right' src="{% static 'icon/delete.png' %}"><br> 017047865109</p>
 
       </div>
     </div>
@@ -128,11 +126,8 @@
       </div>
       <div class="media-body">
         <h4 class="media-heading">Sarah Leu</h4>
-        <p> Hello from California </p>
-        <div class="icon-group">
-        <img src="{% static 'icon/checkmark.svg' %}" class="icon-stuff">
-        <img src="{% static 'icon/xmark.svg' %}" class="icon-stuff">
-        </div>
+        <p> snoelleleu@gmail.com<img class='bin pull-right' src="{% static 'icon/delete.png' %}"><br>017048750986</p>
+
       </div>
     </div>
     </div> <!-- /container -->
