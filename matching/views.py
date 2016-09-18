@@ -16,3 +16,7 @@ def login(request):
 def userpage(request):
     context = {}
     return render(request, 'userpage.html', context)
+
+def swipeSupply(request):
+    context = {}
+    return render(request, 'swipe_supply.html', context)

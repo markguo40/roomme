@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Roome</title>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -35,10 +35,7 @@
       position: relative;
       margin-bottom: 20px;
     }
-    .photo-area .words{
-      position: absolute;
-      top:200px;
-      left: 45%;
+    .words{
       height: 50px;
       width: 100px;
     }
@@ -60,7 +57,12 @@
       height: 300px;
       border-radius: 100px;
     }
-
+    .sign-center {
+      position: absolute;
+      top:200px;
+      width: 100%;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
@@ -72,7 +74,10 @@
       </nav>
       <div class="photo-area">
         <img class="photo" src="{% static 'img/cover.jpeg' %}">
-        <a class="btn btn-success btn-lg words" href="/login" role="button">Sign in</a>
+        <div class="sign-center">
+          <a class="btn btn-success btn-lg words" href="{% url 'login' %}" role="button">Sign in</a>
+        </div>
+
       </div>
       <div class="container">
         <div class="row">
@@ -83,12 +88,13 @@
             </div>
         </div>
         <div class="row">
+        <img class="col-md-6 item item-img" src="{% static 'img/image2.jpg' %}">
             <div class="col-md-6 item item-words">
             <h3>Find you matches</h3>
             <p>Based on your answers to our questions, our matching algorithm lists the best roommates for you. When a match does not suit you, our dynamic algorithm improves your future matches.</p>
             </div>
 
-            <img class="col-md-6 item item-img" src="{% static 'img/image2.jpg' %}">
+
         </div>
       </div> <!-- /container -->
       <footer class="footer">

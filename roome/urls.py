@@ -23,4 +23,5 @@ urlpatterns = [
     url(r'^questions', views.questions, name='questions'),
     url(r'^login', views.login, name='login'),
     url(r'^userpage', views.userpage, name='userpage'),
+    url(r'^swipe-supply', views.swipeSupply, name='swipe_supply'),
 ]
