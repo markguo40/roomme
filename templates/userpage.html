@@ -23,14 +23,21 @@
 
     <style type="text/css">
       body{
-        margin-top: 120px;
+        margin-top: 80px;
       }
-      .form-control {
-        margin-top: 10px;
-        margin-bottom: 10px;
+
+      .profile-image {
+        text-align: center;
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
       }
       .form-signin-heading {
         text-align: center;
+      }
+      .button {
+        margin-top: 20px;
+        margin-bottom: 20px;
       }
     </style>
   </head>
@@ -40,13 +47,9 @@
     <div class="container">
 
       <form class="form-signin">
-        <h2 class="form-signin-heading">Sign in Roome</h2>
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-        <!-- <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button> -->
-        <a href="{% url 'userpage' %}" class="btn btn-lg btn-primary btn-block">Sign in</a>
+      <div class="form-signin-heading"><img class="profile-image" src="{% static 'img/zhanchen.jpg' %}"></div>
+        <a class="btn btn-lg btn-primary btn-block button">Profile</a>
+        <a class="btn btn-lg btn-primary btn-block button">Dashboard</a>
       </form>
 
     </div> <!-- /container -->

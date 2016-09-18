@@ -21,5 +21,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.home, name='home'),
     url(r'^questions', views.questions, name='questions'),
-    url(r'^login', views.login, name='login')
+    url(r'^login', views.login, name='login'),
+    url(r'^userpage', views.userpage, name='userpage'),
 ]

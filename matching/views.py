@@ -11,5 +11,8 @@ def questions(request):
 
 def login(request):
     context = {}
-
     return render(request, 'login.html', context)
+
+def userpage(request):
+    context = {}
+    return render(request, 'userpage.html', context)
