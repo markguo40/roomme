@@ -28,3 +28,12 @@ def dashboard(request):
 def matchesDashboard(request):
     context = {}
     return render(request, 'matches_dashboard.html', context)
+
+def swipeDemand(request):
+    context = {}
+    return render(request, 'swipe.html', context)
+
+def swipeDemandRefreshed(request):
+    print 'in si'
+    context = {}
+    return render(request, 'swipe_refreshed.html', context)

@@ -26,4 +26,6 @@ urlpatterns = [
     url(r'^swipe-supply', views.swipeSupply, name='swipe_supply'),
     url(r'^dashboard', views.dashboard, name='dashboard'),
     url(r'^matches-dashboard', views.matchesDashboard, name='matches_dashboard'),
+    url(r'^swipe-demand', views.swipeDemand, name='swipe_demand'),
+    url(r'^swipe-refreshed', views.swipeDemandRefreshed, name='swipe_demand_refreshed'),
 ]

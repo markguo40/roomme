@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Romme | Sign in</title>
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Owl Carousel Assets -->
+    <link href="{% static 'css/owl.carousel.css' %}" rel="stylesheet">
+    <link href="{% static 'css/owl.theme.css' %}" rel="stylesheet">
+
+    <link href="{% static 'assets/js/google-code-prettify/prettify.css' %}" rel="stylesheet">
+
+    <style type="text/css">
+      body{
+        margin: 0;
+        padding: 0;
+        background-color: #eee;
+      }
+      .profile-image {
+        text-align: center;
+        width: 40px;
+        height: 40px;
+        margin-top: 15px;
+        border-radius: 50px;
+      }
+      .inline {
+        display: inline-block;
+      }
+      .header {
+        padding-bottom: 10px;
+        background-color: #cccccc;
+      }
+      .back {
+        font-size:20px;
+        margin-top: 20px;
+      }
+      .profile-body {
+        margin-left: 40px;
+      }
+      .checkmark {
+        position: relative;
+        top: -130px;
+        left: 140px;
+        width: 140px;
+        height: 140px;
+        background-image: url('{% static 'icon/checkmark.svg' %}');
+        background-repeat: no-repeat;
+      }
+      .boss-body{
+        margin-top: -140px;
+      }
+    </style>
+  </head>
+
+  <body>
+      <nav class="header">
+        <div class="container">
+          <a class="text-muted inline back" href="{% url 'userpage' %}">Back</a>
+          <img class="profile-image pull-right inline" src="{% static 'img/Sarah.jpg' %}">
+        </div> <!-- /container -->
+      </nav>
+    <div id="landing">
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+            <div id="owl-demo" class="owl-carousel">
+
+              <div class="item"><img src="http://images.fineartamerica.com/images-medium-large/shpooleete-cats-portrait-square-format-ausra-paulauskaite.jpg" alt="The Last of us">
+
+              <div class='checkmark'></div>
+
+              <div class="boss-body">
+              <div style="text-align: center">
+                  <h4>Max Smith</h4>
+              </div>
+              <div class="profile-body">
+                  <p>Gender: Male</p>
+                  <p>Age: 19</p>
+                  <p>School: Hogwards</p>
+                  <p>Relationship: Single</p>
+                  <p>Major: Business</p>
+                </div>
+              </div>
+              </div>
+
+              <div class="item"><img src="http://farm3.static.flickr.com/2863/12882191993_ebc071d541_m.jpg" alt="GTA V">
+              <a href="{% url 'swipe_demand_refreshed' %}"><div class='checkmark'></div></a>
+              <div class="boss-body">
+              <div style="text-align: center">
+                  <h4>Peter Thiel</h4>
+              </div>
+              <div class="profile-body">
+                  <p>Gender: Male</p>
+                  <p>Age: 26</p>
+                  <p>School: Hogwards</p>
+                  <p>Relationship: Single</p>
+                  <p>Major: Engineering</p>
+                </div>
+              </div>
+               </div>
+
+              <div class="item">
+              <img src="http://farm8.static.flickr.com/7353/9386782755_8e0a3ddfb5_m.jpg" alt="GTA V">
+              <div class='checkmark'></div>
+              <div class="boss-body">
+              <div style="text-align: center">
+                  <h4>John Meyer</h4>
+              </div>
+              <div class="profile-body">
+                  <p>Gender: Male</p>
+                  <p>Age: 26</p>
+                  <p>School: Hogwards</p>
+                  <p>Relationship: Single</p>
+                  <p>Major: Engineering</p>
+                </div>
+              </div>
+              </div>
+
+
+              </div>
+
+              </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+    #owl-demo .item img{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    </style>
+
+
+    <script src="{% static 'assets/js/jquery-1.9.1.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.js' %}"></script>
+
+    <script>
+    $(document).ready(function() {
+      $("#owl-demo").owlCarousel({
+
+      navigation : false,
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      pagination: false,
+      singleItem : true
+
+      // "singleItem:true" is a shortcut for:
+      // items : 1,
+      // itemsDesktop : false,
+      // itemsDesktopSmall : false,
+      // itemsTablet: false,
+      // itemsMobile : false
+
+      });
+    });
+    </script>
+
+    <script src="{% static 'assets/js/bootstrap-collapse.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap-transition.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap-tab.js' %}" ></script>
+
+    <script src="{% static 'assets/js/google-code-prettify/prettify.js' %}"></script>
+    <script src="{% static 'assets/js/application.js' %}"></script>
+
+</html>
